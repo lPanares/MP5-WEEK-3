@@ -1,8 +1,12 @@
 const txtInput = document.querySelector('#txtInput');
-const btnCount = document.querySelector('#btnCount');
+const btnCheck = document.querySelector('#btnCheck');
 const txtOutput = document.querySelector('#txtOutput');
 
-btnCount.addEventListener('click', function(){
-    let input = txtInput.value;
-    txtOutput.textContent = input.trim().length;
+btnCheck.addEventListener('click', function() {
+    const email = txtInput.value.trim();
+    if (email.includes('@')) {
+        txtOutput.textContent = "Valid";
+    } else {
+        txtOutput.textContent = "Invalid";
+    }
 });
